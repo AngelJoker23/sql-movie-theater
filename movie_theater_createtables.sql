@@ -13,8 +13,8 @@ create table consessions(
 		employee_id integer not null,
 		register_id integer not null,
 		purchased_options varchar (150),
-		payment_option integer not null,
-		purchased_time varchar (15),
+		payment_option varchar (100),
+		purchased_time integer not null,
 		inventory_stock varchar (150)
 		);
 		
@@ -65,5 +65,5 @@ create table offers(
 		age_id integer not null,
 		foreign key (age_id) references customers (age_id) and tickets (age_id),
 		prices_ages integer not null,
-		offer_group integer not null 
+		offer_group varchar (150) 
 		);
